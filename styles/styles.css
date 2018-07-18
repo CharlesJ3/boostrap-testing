@@ -1,0 +1,69 @@
+@keyframes colorChange {
+  0% {  text-shadow: 
+    1px -1px 0 red, 
+    -1px 2px 1px orange, 
+    -2px 4px 1px yellow,
+    -3px 6px 1px green, 
+    -4px 8px 1px blue, 
+    -5px 10px 1px indigo; 
+  }
+
+  20% {  text-shadow: 
+    1px -1px 0 indigo, 
+    -1px 2px 1px red, 
+    -2px 4px 1px orange,
+    -3px 6px 1px yellow, 
+    -4px 8px 1px green, 
+    -5px 10px 1px blue; 
+  }
+
+  40% {  text-shadow: 
+    1px -1px 0 blue, 
+    -1px 2px 1px indigo, 
+    -2px 4px 1px red,
+    -3px 6px 1px orange, 
+    -4px 8px 1px yellow, 
+    -5px 10px 1px green; 
+  }
+
+  60% {  text-shadow: 
+    1px -1px 0 green, 
+    -1px 2px 1px blue, 
+    -2px 4px 1px indigo,
+    -3px 6px 1px red, 
+    -4px 8px 1px orange, 
+    -5px 10px 1px yellow;  
+  }
+  
+  80% {  text-shadow: 
+    1px -1px 0 yellow, 
+    -1px 2px 1px green, 
+    -2px 4px 1px blue,
+    -3px 6px 1px indigo, 
+    -4px 8px 1px red, 
+    -5px 10px 1px orange;  
+  }
+
+  100% {  text-shadow: 
+    1px -1px 0 orange, 
+    -1px 2px 1px yellow, 
+    -2px 4px 1px green,
+    -3px 6px 1px blue, 
+    -4px 8px 1px indigo, 
+    -5px 10px 1px red;    
+  }
+}
+
+.custom-heading-1 {
+  color: white;
+  transition: text-shadow 2s;
+  text-shadow: 
+  1px -1px 0 red, 
+  -1px 2px 1px orange, 
+  -2px 4px 1px yellow,
+  -3px 6px 1px green, 
+  -4px 8px 1px blue, 
+  -5px 10px 1px indigo; 
+  animation: colorChange 5s linear infinite;
+}
+
