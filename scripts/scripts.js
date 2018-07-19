@@ -1,18 +1,49 @@
-let todos = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
+let todos = [{
+  text: 'Clean Room',
+  completed: true
+}, {
+  text: 'Take Trash',
+  completed: false
+}, {
+  text: 'Study',
+  completed: false
+}];
 
-console.log(todos);
+// 1. Convert array to array of objects
+// 2. Create function to remove a todo by text value
+// 3. Case-insensitive 
 
-//delete 3rd item
-todos.splice(2, 1);
+const removeItem = (list, deleteMe) => {
+  const index = list.findIndex(function (item) {
+    return item.text === deleteMe;
+  })
 
-console.log(todos);
+  console.log(index);
+  if (index !== -1){
+    list.splice(index, 1);
+  }
 
-//add new item to the end
-todos.push('Item 6');
+  return list;
+}
 
-console.log(todos);
+console.log(removeItem(todos, 'test'));
 
-//rmeove first item from list
-todos.shift();
 
-console.log(todos);
+
+// const findNote = function (todo, todoTitle) {
+//   return todoItem = todo.find(function (todo) {
+//     return todo.title.toLowerCase() === todoTitle.toLowerCase();
+//   })
+// }
+
+// const findNote = function (todo, todoTitle) {
+//   const index = todo.findIndex(function (todo) {
+//     return todo.title.toLowerCase() === todoTitle.toLowerCase();
+//   })
+
+//   return todo[index];
+// }
+
+// const note = findNote(todos, 'clean Room')
+
+// console.log(note);
